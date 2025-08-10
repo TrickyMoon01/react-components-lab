@@ -1,19 +1,16 @@
 export default function WeatherData(data) {
-  console.log(data)
   return (
-    <>
-      <div>
-        <p>
-          {data.data.day}
-        </p>
-        <p>          
-          {data.data.conditions}
-          </p>
-          <p>
-          {data.data.time}
-          </p>
-        <img src={data.data.img}/>
-      </div>
-    </>
+    <div className="weather">
+      <h2>{data.data.day}</h2>
+      <img src={data.data.img} alt="day" />
+      <p>
+        <span>conditions: </span>
+        {data.data.conditions}
+      </p>
+      <p>
+        <span>time: </span>
+        {data.data.time}
+      </p>
+    </div>
   );
 }
