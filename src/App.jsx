@@ -1,4 +1,6 @@
 // src/App.jsx
+import './App.css'
+import WeatherData from "./WeatherData";
 
 const App = () => {
 
@@ -6,7 +8,9 @@ const App = () => {
     <>
     <h1>Local Weather</h1>
     <section>
-      // Weather data here
+      {weatherForecasts.map(function(data){
+        return <WeatherData data={data}/>
+      })}
     </section>
   </>
   );
